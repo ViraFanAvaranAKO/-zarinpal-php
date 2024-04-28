@@ -1,0 +1,30 @@
+{
+  "name": "ako/zarinpal-php",
+  "description": "A PHP ORM-like package for using all Zarinpal APIs",
+  "type": "library",
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "Ako\\Zarinpal\\Php\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Ako\\Zarinpal\\Php\\Tests\\": "tests/"
+    }
+  },
+  "authors": [
+    {
+      "name": "farhad-rad",
+      "email": "farhad.rad.official@gmail.com"
+    }
+  ],
+  "minimum-stability": "stable",
+  "require": {
+    "guzzlehttp/guzzle": "^7.8",
+    "nesbot/carbon": "^3.2"
+  },
+  "require-dev": {
+    "pear/console_table": "^1.3"
+  }
+}

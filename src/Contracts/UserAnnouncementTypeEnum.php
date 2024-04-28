@@ -1,0 +1,17 @@
+<?php
+
+namespace Ako\Zarinpal\Php\Contracts;
+
+enum UserAnnouncementTypeEnum: string
+{
+    case TYPE_WALLET_TERMINAL = "TYPE_WALLET_TERMINAL";
+    case TYPE_SHAPARA_TERMINAL = "TYPE_SHAPARA_TERMINAL";
+    case TYPE_NEW_USER = "TYPE_NEW_USER";
+    case TYPE_BASIC_USER = "TYPE_BASIC_USER";
+    case TYPE_SILVER_USER = "TYPE_SILVER_USER";
+    case TYPE_GOLD_USER = "TYPE_GOLD_USER";
+    case TYPE_VIP_USER = "TYPE_VIP_USER";
+    case TYPE_VIP_PLUS_USER = "TYPE_VIP_PLUS_USER";
+    case TYPE_ZARINPAL_EMPLOYEE = "TYPE_ZARINPAL_EMPLOYEE";
+    case TYPE_ALL = "TYPE_ALL";
+}
