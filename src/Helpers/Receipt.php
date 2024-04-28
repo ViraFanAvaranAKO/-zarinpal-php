@@ -10,7 +10,7 @@ class Receipt
     private $data;
     public function __construct(?array $data = [])
     {
-        $this->data = (object) Utils::array_merge_by_reference($data, [
+        $this->data = (object) Utils::array_merge_by_reference([
             'code' => null,
             'message' => null,
             'card_hash' => null,
@@ -19,7 +19,7 @@ class Receipt
             'fee_type' => null,
             'fee' => null,
             'order_id' => null,
-        ]);
+        ], $data);
     }
 
     function __get($prop)
