@@ -1,5 +1,5 @@
 {
-  "name": "ako/zarinpal-php",
+  "name": "vfa-ako/zarinpal-php",
   "description": "A PHP ORM-like package for using all Zarinpal APIs",
   "type": "library",
   "license": "MIT",
