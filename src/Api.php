@@ -57,6 +57,9 @@ class Api extends Core
     public function transaction(?StrategiesEnum $via = null, array $data = []): IZarinpalTransaction
     {
         $via ??= Utils::as_enum_or_null(StrategiesEnum::class, $this->settings->defaults->strategy);
+        if (!isset($data['currency'])) {
+            $data['currency'] = $this->settings->defaults->currency;
+        }
         return $via->instantiate_driver($this, $data);
     }
 

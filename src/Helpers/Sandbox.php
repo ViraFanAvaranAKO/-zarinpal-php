@@ -3,6 +3,7 @@
 namespace Ako\Zarinpal\Php\Helpers;
 
 use Ako\Zarinpal\Php\Abstracts\Strategy;
+use Ako\Zarinpal\Php\Contracts\CurrenciesEnum;
 use Ako\Zarinpal\Php\Exceptions\TransactionFailedException;
 
 class Sandbox extends Strategy
@@ -31,7 +32,7 @@ class Sandbox extends Strategy
 
         $data = [
             "MerchantID" => $this->invoice->merchant,
-            "Amount" => $this->invoice->amount / ($this->invoice->currency == 'IRT' ? 1 : 10),
+            "Amount" => $this->invoice->amount / ($this->invoice->currency == CurrenciesEnum::Toman ? 1 : 10),
             "CallbackURL" => $this->invoice->callback,
             "Description" => $this->invoice->description,
             "AdditionalData" => $this->invoice->metadata,
@@ -63,7 +64,7 @@ class Sandbox extends Strategy
         $data = [
             "MerchantID" => $this->invoice->merchant,
             'Authority' => $this->invoice->authority,
-            'Amount' => $this->invoice->amount / ($this->invoice->currency == 'IRT' ? 1 : 10),
+            'Amount' => $this->invoice->amount / ($this->invoice->currency == CurrenciesEnum::Toman ? 1 : 10),
         ];
 
         $client = new \SoapClient($this->getVerificationUrl(), ['encoding' => 'UTF-8']);

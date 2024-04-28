@@ -19,6 +19,9 @@ class TransactionDriver implements IZarinpalTransaction
     {
         $this->_core = $core;
         $this->_invoice = new Invoice($core, $data);
+        if (!isset($data['currency'])) {
+            $this->currency($core->getSettings()->defaults->currency);
+        }
     }
 
     public function useTerminal($value)
